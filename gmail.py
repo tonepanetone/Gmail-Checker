@@ -11,7 +11,7 @@ def gmail_checker(username,password):
 
 class main :
 
-        f = open('emails.txt', 'r')
+        f = open('emails.txt', 'rb+')
         
         conteudo = f.read().split('\n')
 
@@ -20,7 +20,7 @@ class main :
                 #print(splitinho[0] + ' ' +splitinho[1])
                 #print('\n')
                 if(gmail_checker(splitinho[0],splitinho[1])) :
-                        g = open('validos.txt','a')
+                        g = open('validos.txt','a+')
                         g.write(splitinho[0] + ';' +splitinho[1]+'\n')
                         g.close()
                 #else :
